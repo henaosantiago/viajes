@@ -18,11 +18,12 @@ public class Main {
                 System.out.println("0. Salir del menu");
                 System.out.println("1. Empleado");
                 System.out.println("2. Mostrar Empleados");
-
+                System.out.println("3. Mostrar Viajes");
+                System.out.println("4. mostrar viajes por empleados " );
                 int opcion;
                 label23:
                 do {
-                    System.out.println(" Ingrese opción del menu: ");
+                    System.out.println(" Ingrese opcion del menu: ");
                     opcion = read.nextInt();
                     switch (opcion) {
                         case 0:
@@ -42,17 +43,34 @@ public class Main {
                                 }
 
                                 Empleado empleado = (Empleado)var9.next();
-                                System.out.println("*******************************");
+                                System.out.println("*************DATOS DEL EMPLEADO*******************");
+                                System.out.println("id:"+empleado.getId());
                                 System.out.println("Nombre Empleado: " + empleado.getNombre());
                                 System.out.println("Apellido: " + empleado.getApellido());
                                 System.out.println("Cargo: " + empleado.getCargo());
                                 System.out.println("Salario: " + empleado.getSalario());
-                                System.out.println("Tipo de Vuelo: " + empleado.getTipoVuelo());
-                                System.out.println("Gastos totales: " + empleado.calcularCostosTotales());
-                                System.out.println("Bono: " + empleado.bonoViejes());
-                                System.out.println("*******************************");
+
                             }
-                        default:
+                        case 3:
+                            Iterator var = Empleadó.iterator();
+
+                            while(true) {
+                                if (!var.hasNext()) {
+                                    continue label23;
+                                }
+
+                                Vuelos vuelos = (Vuelos) var.next();
+                                System.out.println("************LOS DATOS DEL VUELO*******************");
+                                System.out.println(" tipo de vuelo es:" +vuelos.getTipoVuelo ());
+                                System.out.println(" el origen del vuelo es: " +vuelos.getOrigen ());
+                                System.out.println(" el destino del vuelo es: " +vuelos.getDestino ());
+                                System.out.println(" la fecha de salida del vuelo es : " +vuelos.getFechaDeSalida ());
+                                System.out.println(" la fecha de llegada del vuelo es: " +vuelos.getFechaDeLlegada ());
+                                System.out.println(" el valor del vuelo es: " +vuelos.getValorVuelo ());
+
+                            }
+
+                                default:
                             System.out.println("Selecciona una opción valida");
                     }
                 } while(opcion != 0);

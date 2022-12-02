@@ -112,6 +112,8 @@ public class Empleado extends Vuelos {
                     System.out.println("0. Salir del menu");
                     System.out.println("1. Empleado");
                     System.out.println("2. Mostrar Empleados");
+                    System.out.println("3. Mostrar Viajes");
+                    System.out.println("4. mostrar viajes por empleados " );
                     break;
                 case 1:
                     this.agregarComidas();
