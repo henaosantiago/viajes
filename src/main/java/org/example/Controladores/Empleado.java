@@ -81,8 +81,8 @@ public class Empleado extends Vuelos {
 
     public void agregarEmpleado() {
         Scanner read = new Scanner(System.in);
-        System.out.println("******BUENAS TARDES*********");
-        System.out.println("****AGREGANDO EMPLEADO*****");
+        System.out.println("        ******BUENAS TARDES*********");
+        System.out.println("       ****AGREGANDO EMPLEADO*****");
         System.out.println("Ingrese identificacion: ");
         this.setId(read.next());
         System.out.println("Ingrese nombre del empleado: ");
@@ -97,7 +97,7 @@ public class Empleado extends Vuelos {
         this.setSalario(read.nextDouble());
         System.out.println("0. volver atras");
         System.out.println("1. Alimentacion");
-        System.out.println("2. Alojamiento");
+        System.out.println("2. Hospedaje");
         System.out.println("3. Trasporte");
         System.out.println("4. Vuelos");
 
@@ -113,19 +113,41 @@ public class Empleado extends Vuelos {
                     System.out.println("1. Empleado");
                     System.out.println("2. Mostrar Empleados");
                     System.out.println("3. Mostrar Viajes");
-                    System.out.println("4. mostrar viajes por empleados " );
+                    System.out.println("4. mostrar los datos de la comida" );
+                    System.out.println("5. mostrar viajes por empleados " );
                     break;
                 case 1:
                     this.agregarComidas();
+                    System.out.println("0. volver atras");
+                    System.out.println("1. Alimentacion");
+                    System.out.println("2. Hospedaje");
+                    System.out.println("3. Trasporte");
+                    System.out.println("4. Vuelos");
+
                     break;
                 case 2:
                     this.agregarHospedaje();
+                    System.out.println("0. volver atras");
+                    System.out.println("1. Alimentacion");
+                    System.out.println("2. Hospedaje");
+                    System.out.println("3. Trasporte");
+                    System.out.println("4. Vuelos");
                     break;
                 case 3:
                     this.agregarTransporte();
+                    System.out.println("0. volver atras");
+                    System.out.println("1. Alimentacion");
+                    System.out.println("2. Hospedaje");
+                    System.out.println("3. Trasporte");
+                    System.out.println("4. Vuelos");
                     break;
                 case 4:
                     this.agregarVuelo();
+                    System.out.println("0. volver atras");
+                    System.out.println("1. Alimentacion");
+                    System.out.println("2. Hospedaje");
+                    System.out.println("3. Trasporte");
+                    System.out.println("4. Vuelos");
                     break;
                 default:
                     System.out.println("ingresa una opcion erronea");
