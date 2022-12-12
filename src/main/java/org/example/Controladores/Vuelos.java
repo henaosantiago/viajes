@@ -10,6 +10,18 @@ public class Vuelos extends Alimentacion {
     private String destino;
     private String origen;
 
+    private String id;
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public Vuelos() {
     }
 
@@ -69,6 +81,8 @@ public class Vuelos extends Alimentacion {
     public void agregarVuelo() {
         Scanner read = new Scanner(System.in);
         System.out.println("*****DATOS DEL VUELO*****");
+        System.out.println("ingrese el id del empleado que se va a transportar");
+        this.setId(read.next());
         System.out.println("Ingrese el tipo de vuelo: ");
         this.setTipoVuelo(read.next());
         System.out.println("Ingrese el origen del vuelo: ");

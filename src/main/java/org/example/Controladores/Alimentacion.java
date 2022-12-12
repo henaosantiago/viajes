@@ -6,6 +6,16 @@ public class Alimentacion extends Hospedaje {
     private int cantidadComidas;
     private double valorComidas;
 
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public Alimentacion() {
     }
 
@@ -46,6 +56,8 @@ public class Alimentacion extends Hospedaje {
     public void agregarComidas() {
         Scanner read = new Scanner(System.in);
         System.out.println("*******DATOS DE ALIMENTACION*******");
+        System.out.println("ingrese el id para los viaticos");
+        this.setId(read.next());
         System.out.println("Ingrese la fecha de comida: ");
         this.setFechaDeComida(read.next());
         System.out.println("Ingrese la cantidad de comidas: ");

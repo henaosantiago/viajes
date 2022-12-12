@@ -41,13 +41,19 @@ public class Empleado extends Vuelos {
     }
 
     public void setEdad(int edad) {
-        if (edad < 16) {
-            System.out.println("Ingrese una edad valida");
-        } else if (edad > 105) {
-            System.out.println("Edad erronea");
-        } else {
+        Scanner read = new Scanner(System.in);
+        while(edad < 16 || edad >105 ){
+            if (edad < 16) {
+                System.out.println("Ingrese una edad valida, es muy menor, vuelve a ingresar la edad");
+                edad = read.nextInt();
+            } else if (edad > 105) {
+                System.out.println("Edad erronea, es muy mayor, vuelve a ingresar la edad");
+                edad = read.nextInt();
+            }
             this.edad = edad;
+
         }
+
 
     }
 
@@ -56,13 +62,23 @@ public class Empleado extends Vuelos {
     }
 
     public void setCargo(String cargo) {
-        if (cargo.equals("senior")) {
-            this.cargo = cargo;
-        } else if (cargo.equals("junior")) {
-            this.cargo = cargo;
-        } else {
-            System.out.println("Cargo erroneo");
+        Scanner read = new Scanner(System.in);
+        boolean chequear = cargo.equals("senior") || cargo.equals("junior");
+        while(!chequear){
+            System.out.println("Error al digitar el cargo, es senior o junior");
+            cargo = read.next();
+            if(cargo.equals("senior")){
+                break;
+             } else if (cargo.equals("junior")) {
+                break;
+
+            }else{
+                System.out.println("El cargo no es correcto");
+            }
         }
+        this.cargo = cargo;
+
+
 
     }
 
@@ -109,12 +125,12 @@ public class Empleado extends Vuelos {
             switch (opcion) {
                 case 0:
                     System.out.println("****BUENAS TARDES******");
-                    System.out.println("0. Salir del menu");
                     System.out.println("1. Empleado");
                     System.out.println("2. Mostrar Empleados");
                     System.out.println("3. Mostrar Viajes");
                     System.out.println("4. mostrar los datos de la comida" );
                     System.out.println("5. mostrar viajes por empleados " );
+                    System.out.println("6. Salir del menu");
                     break;
                 case 1:
                     this.agregarComidas();

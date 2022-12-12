@@ -8,6 +8,16 @@ public class Transporte {
     private String fechaInicioTrasporte;
     private String fechaFinDeTrasporte;
 
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public Transporte() {
     }
 
@@ -51,6 +61,8 @@ public class Transporte {
     public void agregarTransporte() {
         Scanner read = new Scanner(System.in);
         System.out.println("*****DATOS DEL TRASPORTE*****");
+        System.out.println("ingrese el id del empleado que se va a transportar");
+        this.setId(read.next());
         System.out.println("Ingrese el tipo de transporte: ");
         this.setTipoTransporte(read.next());
         System.out.println("Ingrese la fecha de inicio del transporte: ");

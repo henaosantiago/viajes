@@ -8,6 +8,22 @@ public class Hospedaje extends Transporte {
     private String fechaInicioHospedaje;
     private String fechaFinalHospedaje;
 
+    private String id;
+
+    public String getFechaFinalHospedaje() {
+        return fechaFinalHospedaje;
+    }
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public Hospedaje() {
     }
 
@@ -64,6 +80,8 @@ public class Hospedaje extends Transporte {
     public void agregarHospedaje() {
         Scanner read = new Scanner(System.in);
         System.out.println("*****DATOS DE HOSPEDAJE*****");
+        System.out.println("ingrese el id del empleado que se va a hospedar");
+        this.setId(read.next());
         System.out.println("Ingrese el tipo de Hospedaje: ");
         this.setTipoHospedaje(read.next());
         System.out.println("Ingrese fecha de inicio de Hospedaje: ");

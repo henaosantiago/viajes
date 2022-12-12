@@ -14,14 +14,15 @@ public class Main {
                 new Hospedaje();
                 new Transporte();
                 new Vuelos();
-                ArrayList<Empleado> Empleadó = new ArrayList();
+                ArrayList<Empleado> empleados = new ArrayList();
                 System.out.println("**********ELIGE UNA OPCION************");
-                System.out.println("          0. Salir del menu");
+
                 System.out.println("          1. Empleado");
                 System.out.println("          2. Mostrar Empleados");
                 System.out.println("          3. Mostrar Viajes");
                 System.out.println("          4. mostrar la comida  " );
                 System.out.println("          5. mostrar viajes por empleados " );
+                System.out.println("          6. Salir del menu");
                 int opcion;
                 label23:
                 do {
@@ -34,10 +35,11 @@ public class Main {
                         case 1:
                             Empleado objetoEmpleado = new Empleado();
                             objetoEmpleado.agregarEmpleado();
-                            Empleadó.add(objetoEmpleado);
+                            empleados.add(objetoEmpleado);
                             break;
+
                         case 2:
-                            Iterator var9 = Empleadó.iterator();
+                            Iterator var9 = empleados.iterator();
 
                             while(true) {
                                 if (!var9.hasNext()) {
@@ -53,8 +55,9 @@ public class Main {
                                 System.out.println("Salario: " + empleado.getSalario());
 
                             }
+
                         case 3:
-                            Iterator var = Empleadó.iterator();
+                            Iterator var = empleados.iterator();
 
                             while(true) {
                                 if (!var.hasNext()) {
@@ -72,8 +75,11 @@ public class Main {
 
                             }
 
+
+
+
                         case 4:
-                            Iterator var2 = Empleadó.iterator();
+                            Iterator var2 = empleados.iterator();
 
                             while(true) {
                                 if (!var2.hasNext()) {
@@ -86,7 +92,34 @@ public class Main {
                                 System.out.println(" cantidad de comida consumia: " +Alimentacion.getCantidadComidas ());
                                 System.out.println(" valor de la alimentracion: " +Alimentacion.getValorComidas ());
 
+
+
                             }
+                        case 5:
+                            System.out.println("ingrese el id del empleado");
+                            String idEmpleado = read.next();
+                            for (Empleado empleado:empleados ) {
+
+                             if (empleado.getId( ).equals(idEmpleado)){
+                                 System.out.println("ya encontro el empleado");
+                                 System.out.println("el nombre del empleado es:"+empleado.getNombre());
+                                 System.out.println("Apellido: " + empleado.getApellido());
+                                 System.out.println("Cargo: " + empleado.getCargo());
+                                 System.out.println("Salario: " + empleado.getSalario());
+                                 System.out.println("los vuelos del empleado son :"+empleado.getTipoVuelo());
+                                 System.out.println(" el origen del vuelo es: " +empleado.getOrigen ());
+                                 System.out.println(" el destino del vuelo es: " +empleado.getDestino ());
+                                 System.out.println(" la fecha de salida del vuelo es : " +empleado.getFechaDeSalida ());
+                                 System.out.println(" la fecha de llegada del vuelo es: " +empleado.getFechaDeLlegada ());
+                                 System.out.println(" el valor del vuelo es: " +empleado.getValorVuelo ());
+                             }  else {
+
+                             }
+                            }
+
+
+                            break ;
+
 
 
 
