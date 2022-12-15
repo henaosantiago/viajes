@@ -15,12 +15,18 @@ public class Main {
                 new Transporte();
                 new Vuelos();
                 ArrayList<Empleado> empleados = new ArrayList();
+
+                System.out.println("**********BIENVENIDOS BLACK-WHITEE************");
+
+                System.out.println("**********************************************");
+
+
                 System.out.println("**********ELIGE UNA OPCION************");
 
                 System.out.println("          1. Empleado");
                 System.out.println("          2. Mostrar Empleados");
                 System.out.println("          3. Mostrar Viajes");
-                System.out.println("          4. mostrar la comida  " );
+                System.out.println("          4. mostrar la comida (transporte) " );
                 System.out.println("          5. mostrar viajes por empleados " );
                 System.out.println("          6. Salir del menu");
                 int opcion;
@@ -39,14 +45,14 @@ public class Main {
                             break;
 
                         case 2:
-                            Iterator var9 = empleados.iterator();
+                            Iterator san9 = empleados.iterator();
 
                             while(true) {
-                                if (!var9.hasNext()) {
+                                if (!san9.hasNext()) {
                                     continue label23;
                                 }
 
-                                Empleado empleado = (Empleado)var9.next();
+                                Empleado empleado = (Empleado)san9.next();
                                 System.out.println("*************DATOS DEL EMPLEADO*******************");
                                 System.out.println("id:"+empleado.getId());
                                 System.out.println("Nombre Empleado: " + empleado.getNombre());
@@ -57,14 +63,14 @@ public class Main {
                             }
 
                         case 3:
-                            Iterator var = empleados.iterator();
+                            Iterator san8 = empleados.iterator();
 
                             while(true) {
-                                if (!var.hasNext()) {
+                                if (!san8.hasNext()) {
                                     continue label23;
                                 }
 
-                                Vuelos vuelos = (Vuelos) var.next();
+                                Vuelos vuelos = (Vuelos) san8.next();
                                 System.out.println("*************LOS DATOS DEL  VUELO*******************");
                                 System.out.println(" tipo de vuelo es:" +vuelos.getTipoVuelo ());
                                 System.out.println(" el origen del vuelo es: " +vuelos.getOrigen ());
@@ -79,18 +85,23 @@ public class Main {
 
 
                         case 4:
-                            Iterator var2 = empleados.iterator();
+                            Iterator san2 = empleados.iterator();
 
                             while(true) {
-                                if (!var2.hasNext()) {
+                                if (!san2.hasNext()) {
                                     continue label23;
                                 }
 
-                                Alimentacion  Alimentacion = (Alimentacion) var2.next();
+                                Alimentacion  Alimentacion = (Alimentacion) san2.next();
                                 System.out.println("************LOS DATOS DE ALIMENTACION*******************");
                                 System.out.println(" la fecha de comida es  :" +Alimentacion.getFechaDeComida ());
                                 System.out.println(" cantidad de comida consumia: " +Alimentacion.getCantidadComidas ());
                                 System.out.println(" valor de la alimentracion: " +Alimentacion.getValorComidas ());
+                                System.out.println("MOSTRAR LOS DATOS DE TRANSPORTE");
+                                System.out.println(" el tipo de transporte: "+Alimentacion.getTipoTransporte());
+                                System.out.println(" la fecha de inicio del transporte: "+Alimentacion.getFechaInicioTrasporte());
+                                System.out.println("la fecha final del transporte: "+Alimentacion.getFechaFinal());
+                                System.out.println("Ingrese el costo del transporte: "+Alimentacion.getCostoTrasporte());
 
 
 

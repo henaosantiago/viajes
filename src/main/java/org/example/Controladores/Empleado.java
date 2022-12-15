@@ -97,7 +97,7 @@ public class Empleado extends Vuelos {
 
     public void agregarEmpleado() {
         Scanner read = new Scanner(System.in);
-        System.out.println("        ******BUENAS TARDES*********");
+        System.out.println("        ******BUENOS DIAS *********");
         System.out.println("       ****AGREGANDO EMPLEADO*****");
         System.out.println("Ingrese identificacion: ");
         this.setId(read.next());
@@ -124,7 +124,7 @@ public class Empleado extends Vuelos {
             opcion = read.nextInt();
             switch (opcion) {
                 case 0:
-                    System.out.println("****BUENAS TARDES******");
+                    System.out.println("****BUENOS DIAS******");
                     System.out.println("1. Empleado");
                     System.out.println("2. Mostrar Empleados");
                     System.out.println("3. Mostrar Viajes");
